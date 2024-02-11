@@ -1,0 +1,181 @@
+$color1: #bc8f8f;
+$color2: #ffc0cb;
+$color3: #ae8853;
+$color4: #ffe4e1;
+$color5: #f5f5f5;
+$color6: #cbb874;
+$text-color: mintcream;
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  font-weight: 500;
+  background-color: #242526;
+  color: #fff;
+}
+
+li {
+  height: 3em;
+  width: 3em;
+  text-align: center;
+  border-radius: 0.4em;
+  line-height: 3em;
+  letter-spacing: 1px;
+  margin: 0.4em;
+  transition: 0.3s;
+  font-size: 1em;
+  color: #000;
+}
+
+.title {
+  margin: 3em 0 3em 0;
+  font-size: 1em;
+  color: $text-color;
+  text-transform: uppercase;
+
+  letter-spacing: 0, 2em;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+#tab {
+  width: 5em;
+}
+
+#caps {
+  width: 6em;
+}
+
+#lShift {
+  width: 8em;
+}
+
+#rShift {
+  width: 8em;
+}
+
+#enter {
+  width: 6em;
+}
+
+#back {
+  width: 5em;
+}
+
+.pinky {
+  background-color: $color1;
+  border: 2px solid $color1;
+}
+
+.pinky.selected {
+  color: $color1;
+}
+
+.ring {
+  background-color: $color2;
+  border: 2px solid $color2;
+}
+
+.ring.selected {
+  color: $color2;
+}
+
+.middle {
+  background-color: $color2;
+  border: 2px solid $color2;
+}
+
+.middle.selected {
+  color: $color2;
+}
+
+.pointer1st {
+  background-color: $color4;
+  border: 2px solid $color4;
+}
+
+.pointer1st.selected {
+  color: $color4;
+}
+
+.pointer2nd {
+  background-color: $color5;
+  border: 2px solid $color5;
+}
+
+.pointer2nd.selected {
+  color: $color5;
+}
+
+.fill-out-key {
+  background-color: $color6;
+  border: 2px solid $color6;
+}
+
+.selected {
+  background-color: transparent;
+  animation: vibrate 0.3s linear infinite both;
+}
+
+.hit {
+  animation: hit 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.result {
+  margin-top: 0;
+}
+
+@keyframes hit {
+  0% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
